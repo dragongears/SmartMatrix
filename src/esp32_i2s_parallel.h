@@ -12,6 +12,13 @@ extern "C" {
 #include "soc/i2s_struct.h"
 #include "rom/lldesc.h"
 
+// https://community.pixelmatix.com/t/vscode-pio-esp32-compilation-error/1466
+#include <sys/types.h>
+#include <freertos/FreeRTOS.h>
+#include <driver/i2s.h>
+#include <rom/lldesc.h>
+#include <rom/gpio.h>
+
 typedef enum {
     I2S_PARALLEL_BITS_8=8,
     I2S_PARALLEL_BITS_16=16,
